@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-JI-Ms6">
+                                <rect key="frame" x="0.0" y="200" width="600" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellID" selectionStyle="default" indentationWidth="10" textLabel="UCQ-rV-PXj" detailTextLabel="hLG-cl-sYw" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="HD7-c1-XIW">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HD7-c1-XIW" id="GpY-Tx-f1l">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UCQ-rV-PXj">
+                                                    <rect key="frame" x="15" y="15" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hLG-cl-sYw">
+                                                    <rect key="frame" x="15" y="35" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="x6g-Bk-SvV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7fv-7t-d0u"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6W6-8X-RI3" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6d-RS-lBH">
+                                        <rect key="frame" x="283" y="68" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="2xK-XY-h1r"/>
+                                            <constraint firstAttribute="height" constant="35" id="MG3-AD-KcN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="serach_Map.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="t6d-RS-lBH" firstAttribute="centerY" secondItem="6W6-8X-RI3" secondAttribute="centerY" constant="-15" id="Hm2-oJ-x0b"/>
+                                    <constraint firstAttribute="height" constant="200" id="mza-QL-Gmz"/>
+                                    <constraint firstItem="t6d-RS-lBH" firstAttribute="centerX" secondItem="6W6-8X-RI3" secondAttribute="centerX" id="xx2-r7-tEM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6W6-8X-RI3" secondAttribute="trailing" id="Hfh-Qm-Qlk"/>
+                            <constraint firstItem="6W6-8X-RI3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jbx-EQ-sXe"/>
+                            <constraint firstItem="6W6-8X-RI3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fYm-TB-73k"/>
+                            <constraint firstItem="EOn-JI-Ms6" firstAttribute="top" secondItem="6W6-8X-RI3" secondAttribute="bottom" id="hbi-Xs-Jcv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOn-JI-Ms6" secondAttribute="bottom" id="lF4-E9-KIf"/>
+                            <constraint firstItem="EOn-JI-Ms6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nIa-Bs-tNH"/>
+                            <constraint firstAttribute="trailing" secondItem="EOn-JI-Ms6" secondAttribute="trailing" id="zjB-FY-Dtt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTableview" destination="EOn-JI-Ms6" id="b1u-dJ-ZID"/>
+                        <outlet property="mapPin" destination="t6d-RS-lBH" id="VV9-Q2-hfH"/>
+                        <outlet property="mapView" destination="6W6-8X-RI3" id="Anc-qG-geX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="serach_Map.png" width="228" height="228"/>
+    </resources>
+</document>
